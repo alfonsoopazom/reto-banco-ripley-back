@@ -1,0 +1,32 @@
+{
+  "name": "reto-ripley",
+  "version": "1.0.0",
+  "description": "Proyecto para postalar a la vacante de desarrollador fullstack en banco ripley",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/alfonso_opazoDev/reto-banco-ripley-back.git"
+  },
+  "author": "Alfonso Opazo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/alfonso_opazoDev/reto-banco-ripley-back/issues"
+  },
+  "homepage": "https://gitlab.com/alfonso_opazoDev/reto-banco-ripley-back#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-promise-router": "^4.1.1",
+    "mongoose": "^6.1.8",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
