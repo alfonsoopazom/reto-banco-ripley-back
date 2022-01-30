@@ -17,6 +17,7 @@ export default {
     findAccountByRutOrName: async (req, res, next) => {
         try {
             const value = req.query.value;
+            console.log(value);
             const response = await models.DestinatarioInfo.find(
                 {
                     $or:[
