@@ -1,5 +1,5 @@
-/node_modules
 .babelrc
 .gitignore
 
 .idea
+.node_modules
