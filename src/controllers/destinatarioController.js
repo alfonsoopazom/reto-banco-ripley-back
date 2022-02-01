@@ -3,6 +3,7 @@ import models from '../models/index.js';
 export default {
     add: async (req, res, next) => {
         try {
+            console.log(req.body);
             await models.DestinatarioInfo.create(req.body);
             res.status(200).send({
                 message: 'El destinatario se agrego correctamente'

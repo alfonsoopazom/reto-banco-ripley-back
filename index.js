@@ -11,18 +11,18 @@ const __dirname = path.resolve();
 
 const urlDB = 'mongodb://localhost:27017/prueba-banco-ripley';
 mongoose.Promise = global.Promise;
-mongoose.connect(urlDB)
+mongoose.connect(urlDB || process.env.MONGODB_URI)
     .then(mongoose => console.log('Conectando a la base de datos'))
     .catch(e => console.log(e));
 
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'src','public')));
+app.use(express.static(path.join(__dirname, 'src', 'public')));
 
 app.use('/api', router);
 
 app.listen(port.get('port'), () => {
     console.log('Server on port: ' + port.get('port'));
-    console.log('Route Main: ' + path.join(__dirname,'src','public'));
+    console.log('Route Main: ' + path.join(__dirname, 'src', 'public'));
 });
